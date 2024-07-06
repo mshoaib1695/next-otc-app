@@ -1,0 +1,33 @@
+.input {
+    all: unset;
+    position: relative;
+    text-align: center;
+    width: 32px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.earlychar {
+    position: relative;
+}
+
+.earlychar::after {
+    content: '';
+    position: absolute;
+    top: 85%;
+    left: 13%;
+    width: 26px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.earlygroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

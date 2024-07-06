@@ -1,0 +1,176 @@
+/* 
+100 – Thin
+200 – Extra Light (Ultra Light)
+300 – Light
+400 – Normal
+500 – Medium
+600 – Semi Bold (Demi Bold)
+700 – Bold
+800 – Extra Bold (Ultra Bold)
+900 – Black (Heavy) 
+*/
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 300;
+    font-style: normal;
+    src: url(./assets/fonts/gilroy/gilroy-light-webfont.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 500;
+    font-style: normal;
+    src: url(./assets/fonts/gilroy/gilroy-medium-webfont.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 800;
+    font-style: normal;
+    src: url(./assets/fonts/gilroy/gilroy-extrabold-webfont.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 900;
+    font-style: normal;
+    src: url(./assets/fonts/gilroy/gilroy-heavy-webfont.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Stephile;
+    font-weight: 400;
+    font-style: normal;
+    src: url(./assets/fonts/stephile/stephilescript-bwv4l-webfont.woff2) format('woff2');
+}
+
+:root {
+    font-family: Gilroy, system-ui, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+
+    --primary-color: #ffffff;
+    --secondary-color: #00ffff;
+
+    color: var(--primary-color);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --button-size: 48px;
+    --footer-zIndex: 10;
+    --header-zIndex: 1000;
+    --content-zIndex: 100;
+    --inline-page-padding: 3.5rem;
+    --inline-mobilePage-padding: 30px;
+    --inline-content-padding: 3.5rem;
+    --main-xpost-size: 544px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* * {
+    outline: 1px solid #f00 !important;
+} */
+
+html {
+    height: 100%;
+    user-select: none;
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 65px;
+    /* letter-spacing: -0.5px; */
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 27px;
+    /* letter-spacing: -0.5px; */
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.main-container {
+    position: relative;
+    background-image: url('./assets/pg01_bg_airdrop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    min-height: 100vh;
+    transition: background-image 0.5s ease;
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    grid-template-rows: 12vh 1fr 9vh; /** DONT CHANGE THESE VALUES */
+    z-index: 0;
+}
+
+.main-content {
+    grid-area: main;
+    padding-inline: var(--inline-content-padding);
+    z-index: var(--content-zIndex);
+}
+
+@media (width <= 1280px) {
+    .main-container {
+        grid-template-rows: 13vh 1fr 16vh;
+    }
+
+    .main-outline,
+    .main-outline2,
+    .main-outline3,
+    .main-outline4,
+    .main-outline5 {
+        display: none;
+    }
+}
+
+@media (width <= 968px) {
+    h1 {
+        font-size: 46px;
+        line-height: 46px;
+    }
+    .main-container {
+        /* grid-template-rows: minmax(4rem, 10vh) 1fr 40vh; */
+        display: inline-block;
+    }
+
+    .main-content {
+        padding-top: 1rem;
+        padding-inline: 0;
+    }
+
+    .main-outline,
+    .main-outline2,
+    .main-outline3,
+    .main-outline4,
+    .main-outline5 {
+        display: none;
+    }
+}

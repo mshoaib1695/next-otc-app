@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.taskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+    border-bottom: solid 2px rgb(255, 255, 255, 0.5);
+    flex: 1;
+}
+
+.task {
+    margin-right: auto;
+}
+
+.info {
+    text-align: right;
+    color: black;
+    text-wrap: nowrap;
+}
+
+.reward {
+    text-align: right;
+    color: cyan;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.buttonLets {
+    display: flex;
+    margin-bottom: 5px;
+    width: 9.5rem;
+    min-width: 9.5rem;
+}
+
+@media screen and (max-width: 968px) {
+    .container {
+        gap: 0.5rem;
+    }
+    .taskContainer {
+        gap: 0.5rem;
+    }
+}

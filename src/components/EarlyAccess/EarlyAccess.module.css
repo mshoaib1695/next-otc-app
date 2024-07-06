@@ -1,0 +1,71 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0);
+    border-radius: 2rem;
+    min-width: 358px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    padding-inline: 1.5rem;
+    row-gap: 1rem;
+    z-index: 2;
+}
+
+.soon {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-inline: 1.5rem;
+    row-gap: 1rem;
+    z-index: 2;
+    align-items: center;
+    padding-bottom: 2rem;
+    /* padding-top: 2rem; */
+    text-align: center;
+}
+
+.header {
+    align-self: center;
+}
+
+.text {
+    align-self: center;
+}
+
+.input {
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.button {
+    display: flex;
+    align-self: center;
+    margin-bottom: 3rem;
+    width: 15rem;
+}
+
+.triangles {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.trianglesContainer {
+    margin-top: 2rem;
+    pointer-events: none;
+}
+
+@media (width <= 968px) {
+    .container {
+        border-radius: 0.7rem;
+        /* flex: 1; */
+        min-width: unset;
+        flex: 1;
+    }
+}

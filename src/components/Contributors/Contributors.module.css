@@ -1,0 +1,11 @@
+.header {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.items {
+    display: flex;
+    grid-gap: 20px;
+}

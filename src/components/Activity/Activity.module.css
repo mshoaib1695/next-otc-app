@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    align-items: center;
+    padding: 0.2rem 2rem;
+    grid-template-areas: 'avatar time' 'activity activity';
+}
+
+.avatar {
+    grid-area: avatar;
+    justify-self: self-start;
+}
+
+.time {
+    grid-area: time;
+    justify-self: self-end;
+}
+
+.activity {
+    grid-area: activity;
+    padding-left: 3.2rem;
+    color: cyan;
+    margin-top: -6px;
+}
+
+@media (width <=468px) {
+    .container {
+        /* padding: 0.5rem; */
+    }
+}

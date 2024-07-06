@@ -1,0 +1,189 @@
+.loading {
+    margin-left: 5px;
+    height: 0;
+    width: 0;
+    padding: 6px;
+    border: 3px solid #00ffff;
+    border-right-color: #fff;
+    border-radius: 22px;
+    -webkit-animation: rotate 1.2s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Align items vertically in center */
+    margin-bottom: 1rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+    padding-block: 2rem;
+    align-items: center;
+    padding-inline: 3rem;
+}
+
+.mediumValue {
+    color: cyan;
+}
+
+.inputOrText {
+    margin-block: 1rem;
+}
+
+.regularText {
+    text-align: center;
+}
+
+.coinChoice {
+    display: flex;
+    gap: 1rem;
+    padding-inline: 2.5rem;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.coinChoice > * {
+    flex: 1;
+    min-width: 7rem;
+}
+
+.btnCoinChoice {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.verifyButton {
+    display: flex;
+    margin: auto;
+    margin-block: 1rem;
+    width: 15rem;
+}
+
+.inputRange {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.sliderticks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.sliderticks span {
+    display: flex;
+    justify-content: center;
+    width: 1px;
+    height: 10px;
+    background: gray;
+    line-height: 40px;
+}
+
+.coin {
+    color: #fff;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 468px) {
+    .box {
+        padding: 1.5rem;
+    }
+
+    .coin {
+        padding-bottom: 1rem;
+    }
+
+    .coinChoice {
+        gap: 1rem;
+        padding-inline: 0;
+        margin: unset;
+        margin-top: unset;
+    }
+
+    .coinChoice > * {
+        /* flex: 1; */
+        min-width: unset;
+        width: unset;
+    }
+
+    .verifyButton {
+        /* margin-block: 1rem; */
+        width: 12rem;
+    }
+}
+
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Removes default focus */
+input[type='range']:focus {
+    outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type='range']::-webkit-slider-runnable-track {
+    background-color: #595959;
+    border-radius: 0.5rem;
+    height: 2px;
+}
+
+/* slider thumb */
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -10px; /* Centers thumb on the track */
+
+    /*custom styles*/
+    background-color: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 5rem;
+}
+
+input[type='range']:focus::-webkit-slider-thumb {
+    /* border: 1px solid #595959;
+    outline: 3px solid #595959;
+    outline-offset: 0.125rem; */
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type='range']::-moz-range-track {
+    background-color: #595959;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+}
+
+/* slider thumb */
+input[type='range']::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0; /*Removes default border-radius that FF applies*/
+
+    /*custom styles*/
+    background-color: #595959;
+    height: 2rem;
+    width: 1rem;
+}
+
+input[type='range']:focus::-moz-range-thumb {
+    /* border: 1px solid #053a5f;
+    outline: 3px solid #053a5f;
+    outline-offset: 0.125rem; */
+}

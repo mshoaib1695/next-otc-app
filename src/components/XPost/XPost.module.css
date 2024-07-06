@@ -1,0 +1,56 @@
+.container {
+    --main-xpost-size: 544px;
+    position: relative;
+    background-image: url('../../assets/x_post.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: var(--main-xpost-size);
+    height: calc(0.5275 * var(--main-xpost-size));
+}
+
+.title {
+    position: absolute;
+    top: calc(0.179 * var(--main-xpost-size)); /* 7.5 rem  / 120px 120/544 0.22 */
+    left: calc(0.05 * var(--main-xpost-size)); /* 2 rem  / 32px 32/544 0.06 */
+    font-size: calc(0.068 * var(--main-xpost-size)); /* 3.5rem  / 56px 56/544 0.103 */
+    font-weight: 300;
+    letter-spacing: -0.3px;
+}
+
+.scoreLogo {
+    position: absolute;
+    top: calc(0.245 * var(--main-xpost-size));
+    left: calc(0.065 * var(--main-xpost-size));
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.score {
+    font-size: calc(0.147 * var(--main-xpost-size));
+    font-weight: 800;
+    color: white;
+    text-align: left;
+}
+
+.airdropLogo {
+    width: calc(0.21 * var(--main-xpost-size));
+}
+
+.inviteCode {
+    position: absolute;
+    top: calc(0.176 * var(--main-xpost-size)); /* 25.4rem  / 406.4px 406.4/544 0.747 */
+    left: calc(0.7265 * var(--main-xpost-size)); /* 25.1rem  / 401.6px 401.6/544 0.738 */
+    font-size: calc(0.047 * var(--main-xpost-size)); /* 1.3rem  / 20.8px 20.8/544 0.038 */
+    font-weight: 700;
+    color: black;
+    width: calc(0.21 * var(--main-xpost-size)); /* 97px  / 97px 97/544 0.178 */
+    text-align: center;
+}
+
+@media screen and (max-width: 968px) {
+    .container {
+        --main-xpost-size: 86vw;
+    }
+}

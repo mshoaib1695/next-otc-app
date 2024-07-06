@@ -1,0 +1,102 @@
+.container {
+    display: grid;
+    grid-template-areas: 'dashBoard dashPoints' 'referrals dashLive';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.9fr;
+    padding-inline: var(--inline-content-padding);
+    column-gap: 8rem;
+}
+
+.dashBoard {
+    grid-area: dashBoard;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.referrals {
+    grid-area: referrals;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.invite {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.dashPoints {
+    background: url('../../assets/20240311-faixa-degrade-3840.png') no-repeat top right/cover;
+    grid-area: dashPoints;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-left: -3rem;
+    padding-left: 3rem;
+    margin-right: -7rem;
+    padding-right: 7rem;
+    padding-top: 3rem;
+}
+
+.dashLive {
+    grid-area: dashLive;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-top: 5rem;
+    justify-content: space-between;
+}
+@media (width <=968px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-inline: var(--inline-mobilePage-padding);
+    }
+
+    .dashLive {
+        row-gap: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .dashPoints {
+        background: none;
+
+        grid-area: none;
+        row-gap: 1rem;
+        margin-left: -0;
+        padding-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
+
+    .referrals {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .invite {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .dashBoard {
+        margin-bottom: 4rem;
+    }
+
+    .dashHeader {
+    }
+
+    .dashAvatar {
+        display: none;
+    }
+}

@@ -1,0 +1,36 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    padding-block: 2rem;
+    max-height: 65vh;
+    min-width: 26vw;
+    /* max-width: 26vw; */
+    padding-inline: 2rem;
+}
+
+.title {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.verifyButton {
+    display: flex;
+    margin: auto;
+    width: 14rem;
+}
+
+.withLightining {
+    display: flex;
+    column-gap: 0.5rem;
+    margin: auto;
+    align-items: stretch;
+    margin-block: 1rem;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    min-height: 65%;
+    /* max-width: 65%; */
+}

@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.item {
+    color: white;
+    text-decoration: none;
+}

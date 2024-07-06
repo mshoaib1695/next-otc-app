@@ -1,0 +1,1420 @@
+{
+    "1490": {
+        "contractAddress": "0xDb4Ea6446350F5240D8AdbBe12306856654d9936",
+        "abi": [
+            {
+                "type": "constructor",
+                "stateMutability": "nonpayable",
+                "inputs": []
+            },
+            {
+                "type": "event",
+                "name": "InitiatedOTC",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "otcDetailsId",
+                        "internalType": "uint256",
+                        "indexed": true
+                    },
+                    {
+                        "type": "string",
+                        "name": "tokenSymbol",
+                        "internalType": "string",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "accountAddress",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "qty",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "otcExtId",
+                        "internalType": "uint256",
+                        "indexed": false
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "ProcessedOTC",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "otcDetailsId",
+                        "internalType": "uint256",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "accountAddress",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "qty",
+                        "internalType": "uint256",
+                        "indexed": false
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "RoleAdminChanged",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    },
+                    {
+                        "type": "bytes32",
+                        "name": "previousAdminRole",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    },
+                    {
+                        "type": "bytes32",
+                        "name": "newAdminRole",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "RoleGranted",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "sender",
+                        "internalType": "address",
+                        "indexed": true
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "RoleRevoked",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "sender",
+                        "internalType": "address",
+                        "indexed": true
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "",
+                        "internalType": "bytes32"
+                    }
+                ],
+                "name": "ADMIN_ROLE",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "CheckFulFillTxHash",
+                "inputs": [
+                    {
+                        "type": "string",
+                        "name": "",
+                        "internalType": "string"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "CheckInitiateTxHash",
+                "inputs": [
+                    {
+                        "type": "string",
+                        "name": "",
+                        "internalType": "string"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "",
+                        "internalType": "bytes32"
+                    }
+                ],
+                "name": "DEFAULT_ADMIN_ROLE",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "",
+                        "internalType": "bytes32"
+                    }
+                ],
+                "name": "DISPENSER_ROLE",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "id",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "otcExtId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "qty",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "string",
+                        "name": "tokenSymbol",
+                        "internalType": "string"
+                    },
+                    {
+                        "type": "address",
+                        "name": "accountAddress",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "chainId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "string",
+                        "name": "txHash",
+                        "internalType": "string"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "timestamp",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "string",
+                        "name": "status",
+                        "internalType": "string"
+                    }
+                ],
+                "name": "OTCDetails",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "string",
+                        "name": "",
+                        "internalType": "string"
+                    }
+                ],
+                "name": "OTCStatus",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "PendingTxCount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "VTRUDispense",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256[]",
+                        "name": "",
+                        "internalType": "uint256[]"
+                    }
+                ],
+                "name": "getAccountDeposits",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "_account",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "string",
+                        "name": "_symbol",
+                        "internalType": "string"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "getCurrentOTCId",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "getPendingCount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "",
+                        "internalType": "bytes32"
+                    }
+                ],
+                "name": "getRoleAdmin",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "grantRole",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "hasRole",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [
+                    {
+                        "type": "tuple",
+                        "name": "",
+                        "internalType": "struct VitruveoOTCFulfillment.otcDetails",
+                        "components": [
+                            {
+                                "type": "uint256",
+                                "name": "id",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "otcExtId",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "qty",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "string",
+                                "name": "tokenSymbol",
+                                "internalType": "string"
+                            },
+                            {
+                                "type": "address",
+                                "name": "accountAddress",
+                                "internalType": "address"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "chainId",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "string",
+                                "name": "txHash",
+                                "internalType": "string"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "timestamp",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "string",
+                                "name": "status",
+                                "internalType": "string"
+                            }
+                        ]
+                    }
+                ],
+                "name": "initiateOTCTrade",
+                "inputs": [
+                    {
+                        "type": "string",
+                        "name": "symbol",
+                        "internalType": "string"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "otcExtId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "chainId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "string",
+                        "name": "txHash",
+                        "internalType": "string"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "qty",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "_value",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "nextTokenId",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "payable",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "processOTCTrade",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "otcId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address payable"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "recoverERC20",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "tokenContract",
+                        "internalType": "contract IERC20"
+                    },
+                    {
+                        "type": "address",
+                        "name": "to",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "renounceRole",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "revokeRole",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "setVTRUDispenser",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "_vtruDispenser",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "supportsInterface",
+                "inputs": [
+                    {
+                        "type": "bytes4",
+                        "name": "interfaceId",
+                        "internalType": "bytes4"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "totalOTCCounter",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "updateOTCStatus",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "_id",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "_statusId",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    }
+                ],
+                "name": "vtruDispenser",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "withdraw",
+                "inputs": []
+            }
+        ]
+    },
+    "14333": {
+        "contractAddress": "0xF51b8d8cD1ED3C71980A8B8D07d621D9A8E74783",
+        "abi": [
+            {
+                "type": "constructor",
+                "stateMutability": "nonpayable",
+                "inputs": []
+            },
+            {
+                "type": "event",
+                "name": "InitiatedOTC",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "otcDetailsId",
+                        "internalType": "uint256",
+                        "indexed": true
+                    },
+                    {
+                        "type": "string",
+                        "name": "tokenSymbol",
+                        "internalType": "string",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "accountAddress",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "qty",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "otcExtId",
+                        "internalType": "uint256",
+                        "indexed": false
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "ProcessedOTC",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "otcDetailsId",
+                        "internalType": "uint256",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "accountAddress",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "qty",
+                        "internalType": "uint256",
+                        "indexed": false
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "RoleAdminChanged",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    },
+                    {
+                        "type": "bytes32",
+                        "name": "previousAdminRole",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    },
+                    {
+                        "type": "bytes32",
+                        "name": "newAdminRole",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "RoleGranted",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "sender",
+                        "internalType": "address",
+                        "indexed": true
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "RoleRevoked",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "sender",
+                        "internalType": "address",
+                        "indexed": true
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "",
+                        "internalType": "bytes32"
+                    }
+                ],
+                "name": "ADMIN_ROLE",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "",
+                        "internalType": "bytes32"
+                    }
+                ],
+                "name": "DEFAULT_ADMIN_ROLE",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "",
+                        "internalType": "bytes32"
+                    }
+                ],
+                "name": "DISPENSER_ROLE",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "id",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "otcExtId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "qty",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "string",
+                        "name": "tokenSymbol",
+                        "internalType": "string"
+                    },
+                    {
+                        "type": "address",
+                        "name": "accountAddress",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "chainId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "string",
+                        "name": "txHash",
+                        "internalType": "string"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "timestamp",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "string",
+                        "name": "status",
+                        "internalType": "string"
+                    }
+                ],
+                "name": "OTCDetails",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "string",
+                        "name": "",
+                        "internalType": "string"
+                    }
+                ],
+                "name": "OTCStatus",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "PendingTxCount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "VTRUDispense",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256[]",
+                        "name": "",
+                        "internalType": "uint256[]"
+                    }
+                ],
+                "name": "getAccountDeposits",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "_account",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "string",
+                        "name": "_symbol",
+                        "internalType": "string"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "getCurrentOTCId",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "getPendingCount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "",
+                        "internalType": "bytes32"
+                    }
+                ],
+                "name": "getRoleAdmin",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "grantRole",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "hasRole",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [
+                    {
+                        "type": "tuple",
+                        "name": "",
+                        "internalType": "struct VitruveoOTCDispenser.otcDetails",
+                        "components": [
+                            {
+                                "type": "uint256",
+                                "name": "id",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "otcExtId",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "qty",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "string",
+                                "name": "tokenSymbol",
+                                "internalType": "string"
+                            },
+                            {
+                                "type": "address",
+                                "name": "accountAddress",
+                                "internalType": "address"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "chainId",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "string",
+                                "name": "txHash",
+                                "internalType": "string"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "timestamp",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "string",
+                                "name": "status",
+                                "internalType": "string"
+                            }
+                        ]
+                    }
+                ],
+                "name": "initiateOTCTrade",
+                "inputs": [
+                    {
+                        "type": "string",
+                        "name": "symbol",
+                        "internalType": "string"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "otcExtId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "chainId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "string",
+                        "name": "txHash",
+                        "internalType": "string"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "qty",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "_value",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "nextTokenId",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "payable",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "processOTCTrade",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "otcId",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address payable"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "recoverERC20",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "tokenContract",
+                        "internalType": "contract IERC20"
+                    },
+                    {
+                        "type": "address",
+                        "name": "to",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "renounceRole",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "revokeRole",
+                "inputs": [
+                    {
+                        "type": "bytes32",
+                        "name": "role",
+                        "internalType": "bytes32"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "setVTRUDispenser",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "_vtruDispenser",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "supportsInterface",
+                "inputs": [
+                    {
+                        "type": "bytes4",
+                        "name": "interfaceId",
+                        "internalType": "bytes4"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "totalOTCCounter",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "updateOTCStatus",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "_id",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "_statusId",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    }
+                ],
+                "name": "vtruDispenser",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "withdraw",
+                "inputs": []
+            }
+        ]
+    }
+}

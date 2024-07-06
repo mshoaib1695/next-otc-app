@@ -1,0 +1,35 @@
+[
+    {
+        "i18n-label": "airdrop.navbar.airdrop",
+        "url": "/airdrop"
+    },
+
+    {
+        "i18n-label": "airdrop.navbar.leaderboard",
+        "url": "/leaderboard"
+    },
+
+    {
+        "i18n-label": "airdrop.navbar.swap",
+        "url": "/otc/swap"
+    },
+
+    {
+        "i18n-label": "airdrop.navbar.stake",
+        "url": "/otc/stake"
+    },
+
+    {
+        "i18n-label": "airdrop.navbar.about",
+        "url": "https://vitruveo.gitbook.io/about-vitruveo/general/about-vitruveo",
+        "tooltip": "airdrop.navbar.otc-tooltip",
+        "target": "_blank"
+    },
+
+    {
+        "i18n-label": "airdrop.navbar.devgods",
+        "url": "https://vitruveo.gitbook.io/about-vitruveo/devgod-developer-incentive-program/devgod-overview",
+        "tooltip": "airdrop.navbar.otc-tooltip",
+        "target": "_blank"
+    }
+]

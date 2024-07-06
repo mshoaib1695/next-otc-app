@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 1rem;
+}
+
+.linkContainer {
+    display: flex;
+}
+
+.btnCopy {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.copied {
+    color: white;
+    text-align: center;
+    right: -4rem;
+    top: 1rem;
+    position: absolute;
+}
+
+@media (width <=468px) {
+    .container {
+        width: auto;
+    }
+
+    .copied {
+        top: 0;
+    }
+
+    .linkContainer {
+        column-gap: 0.5rem;
+    }
+}

@@ -1,0 +1,62 @@
+.container {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    height: var(--button-size);
+    display: flex;
+    background: transparent;
+    border: none;
+    border-top-left-radius: 10rem !important;
+    border-bottom-left-radius: 10rem !important;
+    border-top-right-radius: 10rem !important;
+    border-bottom-right-radius: 10rem !important;
+    overflow: hidden;
+    flex: 1;
+    opacity: 1;
+}
+
+.disabled {
+    transition: none;
+    opacity: 0.5;
+}
+
+.loading {
+    transition: none;
+    opacity: 1;
+}
+
+.container:not(.disabled, .loading):hover {
+    transform: scale(1.05);
+}
+
+.container:not(.disabled, .loading):active {
+    transform: scale(0.95);
+}
+
+.logo {
+    flex: 0 0 var(--button-size);
+    margin-right: -2px;
+}
+
+.content {
+    font-family: Gilroy;
+    flex: 1;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+    margin-left: calc((var(--button-size) / 2) * -1);
+}
+
+.backButton {
+    flex: 1;
+    background-color: black;
+    height: var(--button-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+}

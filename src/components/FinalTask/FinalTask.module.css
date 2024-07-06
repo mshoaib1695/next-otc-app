@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container > h2 {
+    font-size: 1.5rem;
+}
+
+.container > p {
+    font-size: 1.5rem;
+}
+
+.header {
+    display: flex;
+    column-gap: 0.4rem;
+    align-items: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .container {
+        padding: 0;
+    }
+}

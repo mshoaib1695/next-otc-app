@@ -1,0 +1,139 @@
+.main-outline {
+    z-index: 1;
+    position: fixed !important;
+    bottom: calc(-25vw / 1.5);
+    width: 25vw;
+    left: -3vw;
+    pointer-events: none;
+}
+
+.main-outline2 {
+    z-index: 1;
+    position: fixed !important;
+    bottom: calc(-25vw / 1.5);
+    width: 25vw;
+    left: 15vw;
+    pointer-events: none;
+}
+
+.main-outline3 {
+    z-index: 1;
+    position: fixed !important;
+    bottom: calc(-25vw / 1.5);
+    width: 25vw;
+    left: 35vw;
+    pointer-events: none;
+}
+
+.main-outline4 {
+    z-index: 1;
+    position: fixed !important;
+    bottom: calc(-25vw / 1.5);
+    width: 25vw;
+    left: 56vw;
+    pointer-events: none;
+}
+
+.main-outline5 {
+    z-index: 1;
+    position: fixed !important;
+    bottom: calc(-25vw / 1.5);
+    width: 25vw;
+    left: 78vw;
+    pointer-events: none;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: translateX(-3vw) rotate(45deg);
+    }
+    50% {
+        transform: translateX(-3vw) rotate(45deg);
+    }
+    70% {
+        transform: translateX(-3vw) rotate(60deg);
+    }
+    100% {
+        transform: translateX(-3vw) rotate(0deg);
+    }
+}
+
+.animate1 {
+    animation: rotate1 10s infinite linear alternate;
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: translateX(15vw) rotate(120deg);
+    }
+    80% {
+        transform: translateX(15vw) rotate(120deg);
+    }
+    90% {
+        transform: translateX(15vw) rotate(100deg);
+    }
+    100% {
+        transform: translateX(15vw) rotate(160deg);
+    }
+}
+
+.animate2 {
+    animation: rotate2 40s infinite linear alternate;
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: translateX(35vw) rotate(45deg);
+    }
+    50% {
+        transform: translateX(35vw) rotate(45deg);
+    }
+    70% {
+        transform: translateX(35vw) rotate(0deg);
+    }
+    100% {
+        transform: translateX(35vw) rotate(60deg);
+    }
+}
+
+.animate3 {
+    animation: rotate3 30s infinite linear alternate;
+}
+
+@keyframes rotate4 {
+    0% {
+        transform: translateX(56vw) rotate(120deg);
+    }
+    70% {
+        transform: translateX(56vw) rotate(120deg);
+    }
+    90% {
+        transform: translateX(56vw) rotate(80deg);
+    }
+    100% {
+        transform: translateX(56vw) rotate(160deg);
+    }
+}
+
+.animate4 {
+    animation: rotate4 20s infinite linear alternate;
+}
+
+@keyframes rotate5 {
+    0% {
+        transform: translateX(78vw) rotate(45deg);
+    }
+    80% {
+        transform: translateX(78vw) rotate(45deg);
+    }
+    90% {
+        transform: translateX(78vw) rotate(100deg);
+    }
+    100% {
+        transform: translateX(78vw) rotate(60deg);
+    }
+}
+
+.animate5 {
+    animation: rotate5 50s infinite linear alternate;
+}

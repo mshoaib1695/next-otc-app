@@ -1,0 +1,1262 @@
+{
+    "1490": {
+        "contractAddress": "0x67f0E663fE9C49F136db40B279fB9ecc16589deC",
+        "abi": [
+            {
+                "type": "constructor",
+                "stateMutability": "nonpayable",
+                "inputs": []
+            },
+            {
+                "type": "event",
+                "name": "OwnershipTransferred",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "previousOwner",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "newOwner",
+                        "internalType": "address",
+                        "indexed": true
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "Staked",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "counter",
+                        "internalType": "uint256",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "epochs",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "startBlock",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "endBlock",
+                        "internalType": "uint256",
+                        "indexed": false
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "Unstaked",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "unstakeBlock",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256",
+                        "indexed": false
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "DECIMALS",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "EPOCH_BLOCKS",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "REWARD_DIVISOR",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "addTerm",
+                "inputs": [
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "rewardMultiplier",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "dailyPoints",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "calculateCurrentPoints",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "calculateReward",
+                "inputs": [
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "tuple[]",
+                        "name": "",
+                        "internalType": "struct VTRUAirdropStake.Stake[]",
+                        "components": [
+                            {
+                                "type": "uint256",
+                                "name": "id",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint16",
+                                "name": "epochs",
+                                "internalType": "uint16"
+                            },
+                            {
+                                "type": "address",
+                                "name": "account",
+                                "internalType": "address"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "amount",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "earned",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "startBlock",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "endBlock",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "bool",
+                                "name": "claimed",
+                                "internalType": "bool"
+                            }
+                        ]
+                    }
+                ],
+                "name": "getAccountStakes",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "getCurrentCount",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "tuple",
+                        "name": "",
+                        "internalType": "struct VTRUAirdropStake.Stake",
+                        "components": [
+                            {
+                                "type": "uint256",
+                                "name": "id",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint16",
+                                "name": "epochs",
+                                "internalType": "uint16"
+                            },
+                            {
+                                "type": "address",
+                                "name": "account",
+                                "internalType": "address"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "amount",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "earned",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "startBlock",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "endBlock",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "bool",
+                                "name": "claimed",
+                                "internalType": "bool"
+                            }
+                        ]
+                    }
+                ],
+                "name": "getStake",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "stakeId",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256[]",
+                        "name": "",
+                        "internalType": "uint256[]"
+                    }
+                ],
+                "name": "getStakeIdByAccount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "getUnlockedVTRU",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "isActive",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    }
+                ],
+                "name": "owner",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "renounceOwnership",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "setIsActive",
+                "inputs": [
+                    {
+                        "type": "bool",
+                        "name": "_isActive",
+                        "internalType": "bool"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "payable",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "stake",
+                "inputs": [
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "stakeIdsByAccount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "id",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "earned",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "startBlock",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "endBlock",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "bool",
+                        "name": "claimed",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "stakesByAccount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "id",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "earned",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "startBlock",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "endBlock",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "bool",
+                        "name": "claimed",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "stakesById",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "rewardMultiplier",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "rewardPoints",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "blocks",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "terms",
+                "inputs": [
+                    {
+                        "type": "uint16",
+                        "name": "",
+                        "internalType": "uint16"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "totalStaked",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "transferOwnership",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "newOwner",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "unstake",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "withdraw",
+                "inputs": []
+            }
+        ]
+    },
+    "14333": {
+        "contractAddress": "0x5665fC9f546DEf14B44fD5e8eBB2FD7fea7ceCc9",
+        "abi": [
+            {
+                "type": "constructor",
+                "stateMutability": "nonpayable",
+                "inputs": []
+            },
+            {
+                "type": "event",
+                "name": "OwnershipTransferred",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "previousOwner",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "newOwner",
+                        "internalType": "address",
+                        "indexed": true
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "Staked",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "counter",
+                        "internalType": "uint256",
+                        "indexed": true
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "epochs",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "startBlock",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "endBlock",
+                        "internalType": "uint256",
+                        "indexed": false
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "event",
+                "name": "Unstaked",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address",
+                        "indexed": true
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "unstakeBlock",
+                        "internalType": "uint256",
+                        "indexed": false
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256",
+                        "indexed": false
+                    }
+                ],
+                "anonymous": false
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "DECIMALS",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "EPOCH_BLOCKS",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "REWARD_DIVISOR",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "addTerm",
+                "inputs": [
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "rewardMultiplier",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "dailyPoints",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "calculateCurrentPoints",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "calculateReward",
+                "inputs": [
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "tuple[]",
+                        "name": "",
+                        "internalType": "struct VTRUAirdropStake.Stake[]",
+                        "components": [
+                            {
+                                "type": "uint256",
+                                "name": "id",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint16",
+                                "name": "epochs",
+                                "internalType": "uint16"
+                            },
+                            {
+                                "type": "address",
+                                "name": "account",
+                                "internalType": "address"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "amount",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "earned",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "startBlock",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "endBlock",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "bool",
+                                "name": "claimed",
+                                "internalType": "bool"
+                            }
+                        ]
+                    }
+                ],
+                "name": "getAccountStakes",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "tuple",
+                        "name": "",
+                        "internalType": "struct VTRUAirdropStake.Stake",
+                        "components": [
+                            {
+                                "type": "uint256",
+                                "name": "id",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint16",
+                                "name": "epochs",
+                                "internalType": "uint16"
+                            },
+                            {
+                                "type": "address",
+                                "name": "account",
+                                "internalType": "address"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "amount",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "earned",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "startBlock",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "endBlock",
+                                "internalType": "uint256"
+                            },
+                            {
+                                "type": "bool",
+                                "name": "claimed",
+                                "internalType": "bool"
+                            }
+                        ]
+                    }
+                ],
+                "name": "getStake",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "stakeId",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256[]",
+                        "name": "",
+                        "internalType": "uint256[]"
+                    }
+                ],
+                "name": "getStakeIdByAccount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "bool",
+                        "name": "",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "isActive",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    }
+                ],
+                "name": "owner",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "renounceOwnership",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "setIsActive",
+                "inputs": [
+                    {
+                        "type": "bool",
+                        "name": "_isActive",
+                        "internalType": "bool"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "payable",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "stake",
+                "inputs": [
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "stakeIdsByAccount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "id",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "earned",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "startBlock",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "endBlock",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "bool",
+                        "name": "claimed",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "stakesByAccount",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "id",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint16",
+                        "name": "epochs",
+                        "internalType": "uint16"
+                    },
+                    {
+                        "type": "address",
+                        "name": "account",
+                        "internalType": "address"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "amount",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "earned",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "startBlock",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "endBlock",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "bool",
+                        "name": "claimed",
+                        "internalType": "bool"
+                    }
+                ],
+                "name": "stakesById",
+                "inputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "rewardMultiplier",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "rewardPoints",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "type": "uint256",
+                        "name": "blocks",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "terms",
+                "inputs": [
+                    {
+                        "type": "uint16",
+                        "name": "",
+                        "internalType": "uint16"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "view",
+                "outputs": [
+                    {
+                        "type": "uint256",
+                        "name": "",
+                        "internalType": "uint256"
+                    }
+                ],
+                "name": "totalStaked",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "transferOwnership",
+                "inputs": [
+                    {
+                        "type": "address",
+                        "name": "newOwner",
+                        "internalType": "address"
+                    }
+                ]
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "unstake",
+                "inputs": []
+            },
+            {
+                "type": "function",
+                "stateMutability": "nonpayable",
+                "outputs": [],
+                "name": "withdraw",
+                "inputs": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+.container {
+    grid-area: left-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-top: 2rem;
+    padding-inline: var(--inline-content-padding);
+}
+
+.invite {
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-inline: var(--inline-mobilePage-padding);
+        height: 50vh;
+    }
+}

@@ -1,0 +1,81 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: rgba(0, 0, 0);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    column-gap: 2rem;
+    margin: auto;
+}
+
+.buttonJoin {
+    display: flex;
+    width: 18rem;
+}
+
+.chip {
+    transition: transform 0.2s ease-in-out;
+}
+
+.chip:hover {
+    transform: scale(1.08);
+    transition: color 0.5s ease-in-out;
+}
+
+.chip:active {
+    transform: scale(0.98);
+}
+
+.close {
+    margin-top: 1rem;
+    border: none;
+    background-color: transparent;
+    color: cyan;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.codeContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btnCopy {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.copied {
+    color: white;
+    text-align: center;
+    right: -5rem;
+    position: absolute;
+}
+
+@media (width <= 968px) {
+    .content {
+        border-radius: 0.5rem;
+        padding: 2rem;
+        max-width: 90vw;
+    }
+}

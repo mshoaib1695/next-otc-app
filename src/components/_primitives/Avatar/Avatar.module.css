@@ -1,0 +1,42 @@
+.avatarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.8rem;
+    flex: 0 0 38px;
+}
+
+.avatarImage {
+    width: 38px;
+}
+
+.avatarName {
+    color: white;
+    word-break: break-all;
+}
+
+.avatarWallet {
+    margin-left: 0.5rem;
+    color: white;
+}
+
+@media screen and (max-width: 968px) {
+    .avatarName {
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-height: 1380px) {
+    .avatar {
+        width: 60px;
+        height: 60px;
+        margin-right: 0.5rem;
+    }
+}

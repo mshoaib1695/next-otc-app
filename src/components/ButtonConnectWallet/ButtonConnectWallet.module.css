@@ -1,0 +1,50 @@
+.buttonContainer {
+    display: flex;
+    width: 14rem;
+}
+
+@media (width <= 968px) {
+    .buttonContainer {
+        width: unset;
+    }
+}
+
+.walletContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.userInfoContainer {
+    display: flex;
+    padding-left: 1rem;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.changeWallet {
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-right: 4px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.changeWallet:hover {
+    transform: scale(1.08);
+    transition: color 0.5s ease-in-out;
+}
+
+.changeWallet:active {
+    transform: scale(0.98);
+}

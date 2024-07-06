@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    column-gap: 0.5rem;
+    /* background: black; */
+    /* padding: 2rem; */
+}
+
+.logo01 {
+    transform: rotate(0deg);
+    transition: opacity 0.5s;
+}
+
+.logo02 {
+    transform: rotate(45deg);
+    transition: opacity 0.5s;
+}
+
+.logo03 {
+    transform: rotate(90deg);
+    transition: opacity 0.5s;
+}
+
+.logo04 {
+    transform: rotate(135deg);
+    transition: opacity 0.5s;
+}
+
+.logo05 {
+    transform: rotate(180deg);
+    transition: opacity 0.5s;
+}
+
+.logo06 {
+    transform: rotate(225deg);
+    transition: opacity 0.5s;
+}

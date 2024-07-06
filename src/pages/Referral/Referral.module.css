@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    grid-template-areas: 'left-content right-content';
+    grid-template-columns: 1fr 1fr;
+    padding-inline: var(--inline-content-padding);
+}
+
+.left {
+    grid-area: left-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: normal;
+    color: white;
+    padding-top: 2rem;
+}
+
+.btnConnect {
+    margin-top: 2rem;
+    width: 20rem;
+}

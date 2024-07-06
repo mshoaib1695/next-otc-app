@@ -1,0 +1,136 @@
+.container {
+    display: grid;
+    grid-template-areas: 'header right-content' 'left-content right-content' '. right-content';
+    grid-template-columns: 3fr 2fr;
+    padding-inline: var(--inline-content-padding);
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+
+.left {
+    grid-area: left-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-top: 4rem;
+    color: white;
+}
+
+.right {
+    grid-area: right-content;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    min-width: max-content;
+}
+
+.airdrops {
+    display: flex;
+    column-gap: 0.5rem;
+    row-gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-block: 1rem;
+}
+
+.item {
+    display: flex;
+    column-gap: 1.5rem;
+    text-wrap: balance;
+}
+
+.item > svg {
+    align-self: flex-start;
+    flex: 0 0 3rem;
+}
+
+.dex {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.8rem;
+}
+
+.dexImage {
+    width: 70px;
+}
+
+@media screen and (max-width: 1280px) {
+    .container {
+        grid-template-areas: 'header' 'right-content' 'left-content';
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item > svg {
+        flex: 0 0 2rem;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .container {
+        grid-template-areas: 'header' 'right-content' 'left-content';
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        text-wrap: balance;
+        margin-bottom: 1rem;
+    }
+
+    .left {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        margin-bottom: 3rem;
+    }
+
+    .item {
+        column-gap: 1rem;
+    }
+
+    .item > svg {
+        align-self: flex-start;
+        flex: 0 0 2rem;
+    }
+
+    .right {
+        min-width: auto;
+    }
+    .items {
+        padding-block: 2rem;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-inline: var(--inline-mobilePage-padding);
+    }
+}

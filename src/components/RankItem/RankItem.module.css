@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 50px;
+    min-height: 50px;
+}
+
+.position {
+    flex: 0 0 20%;
+    padding-left: 2rem;
+}
+
+.avatar {
+    flex: 0 0 32%;
+}
+
+.invited {
+    flex: 0 0 28%;
+    text-align: start;
+}
+
+.score {
+    flex: 0 0 20%;
+    text-align: left;
+    padding-right: 2rem;
+}
+
+.black {
+    color: #000;
+}
+
+@media (width <=968px) {
+    .container {
+        padding-inline: 0.1rem;
+    }
+    .invited {
+        display: none;
+    }
+
+    .position {
+        flex: 0 0 30%;
+        padding-left: 1rem;
+    }
+
+    .avatar {
+        flex: 0 0 36%;
+        overflow: hidden;
+    }
+    .score {
+        flex: 0 0 34%;
+        padding-right: 1rem;
+        text-align: end;
+    }
+}

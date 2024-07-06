@@ -1,0 +1,57 @@
+@keyframes fallAndTilt {
+    0% {
+        transform: translateY(-230px) translateX(0px) rotate(-5deg) scale(0.1);
+        opacity: 0.1;
+    }
+    25% {
+        transform: translateY(-160px) translateX(20px) rotate(-15deg) scale(0.3);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-100px) translateX(-20px) rotate(15deg) scale(0.6);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+.parachute {
+    z-index: 9999999999;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    animation: fallAndTilt 5s linear;
+}
+
+.airdrop {
+    color: black;
+}
+
+.airdropContainer {
+    position: relative;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+}
+
+@media (width <= 968px) {
+    .airdrop {
+        margin-block: 2rem;
+        justify-content: center;
+    }
+}
+
+@media (width <= 1457px) {
+    .airdrop {
+        margin-block: 4rem;
+    }
+}
+
+@media (width <=468px) {
+    .airdrop {
+        margin-bottom: 8rem;
+    }
+}

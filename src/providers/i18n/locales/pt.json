@@ -1,0 +1,38 @@
+{
+    "translation": {
+        "airdrop.languages.pt": "Português",
+        "airdrop.languages.en": "English",
+        "airdrop.languages.es": "Español",
+
+        "airdrop.home.letsvitruveo": "#VamosVitruveo",
+        "airdrop.home.create": "Crie Livremente.",
+        "airdrop.home.earn": "Ganhe sem medo.",
+        "airdrop.home.worldfirst": "O primeiro protocolo de rebase automático L1 do mundo, criando múltiplas fontes de receita para criadores e colecionadores.",
+        "airdrop.home.airdrop.earn": "Ganhe",
+        "airdrop.home.airdrop.part1": "Pont",
+        "airdrop.home.airdrop.part2": "o",
+        "airdrop.home.airdrop.part3": "s",
+        "airdrop.home.pointsby": "de Airdrop por",
+        "airdrop.home.reputation": "Reputação",
+        "airdrop.home.swapping": "Troca",
+        "airdrop.home.staking": "Staking",
+        "airdrop.home.farming": "Farming",
+        "airdrop.home.rebasing": "Rebasing",
+
+        "airdrop.navbar.airdrop": "Airdrop",
+        "airdrop.navbar.about": "sobre",
+        "airdrop.navbar.leaderboard": "leaderboard",
+        "airdrop.navbar.devgods": "dev gods",
+        "airdrop.navbar.otc": "otc",
+
+        "airdrop.activities.header": "Atividades Recentes",
+        "airdrop.activities.time": "{{value, relativetime(range: minutes, style: narrow)}}",
+        "airdrop.activities.earned": "Ganhou {{value, number}} Pontos",
+        "airdrop.activities.acquired": "Adquiriu {{value, number}} $VTRU",
+
+        "airdrop.accountdash.tvl": "TVL {{value, number}}",
+        "airdrop.accountdash.users": "usuários {{value, number}}",
+        "airdrop.accountdash.wallets": "carteiras {{value, number}}",
+        "airdrop.accountdash.vtruotc": "vtru otc {{value, number}}"
+    }
+}

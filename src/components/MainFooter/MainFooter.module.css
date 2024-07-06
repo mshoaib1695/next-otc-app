@@ -1,0 +1,38 @@
+.container {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: var(--inline-page-padding);
+    z-index: var(--footer-zIndex);
+}
+
+.version {
+    margin-left: 1.5rem;
+    margin-right: auto;
+}
+
+@media (width <= 968px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        padding-inline: var(--inline-mobilePage-padding);
+        height: 40vh;
+    }
+
+    .socialMedias {
+        /* margin: auto; */
+    }
+
+    .analytics {
+        display: flex;
+        /* margin: auto; */
+        position: absolute;
+    }
+
+    .version {
+        /* margin: auto; */
+        display: none;
+    }
+}

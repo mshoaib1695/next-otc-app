@@ -1,0 +1,71 @@
+.container {
+    display: grid;
+    /* align-items: center; */
+    /* width: 100%; */
+    /* gap: 1rem; */
+}
+
+.reward {
+    text-transform: uppercase;
+    color: cyan;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.taskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: solid 1px rgb(255, 255, 255, 1);
+    padding-bottom: 0.3rem;
+}
+
+.task {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    flex: 0 0 15rem;
+    text-wrap: balance;
+}
+
+.info {
+    text-align: right;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: 0.8rem;
+}
+
+.buttonAction {
+    transition: transform 0.2s ease-in-out;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    color: cyan;
+    font-size: 0.8rem;
+    font-weight: 900;
+    /* letter-spacing: 1px; */
+    cursor: pointer;
+}
+
+.buttonAction:not(.buttonActionDisabled):hover {
+    transform: scale(1.05);
+}
+
+.buttonAction:not(.buttonActionDisabled):active {
+    transform: scale(0.95);
+}
+
+.buttonActionDisabled {
+    color: white;
+    cursor: not-allowed;
+    transition: none;
+    opacity: 0.5;
+}
+
+.buttonAction > svg {
+    margin-left: 0.3rem;
+}

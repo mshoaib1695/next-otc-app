@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.eplays {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.item > svg {
+    transition: fill 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.item > svg:hover {
+    fill: cyan;
+    transform: scale(1.05);
+    transition: color 0.5s ease-in-out;
+}
+
+.item {
+    align-self: center;
+}
+
+.vitruveo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* @media (width <= var(--mobile-breakpoint)) { */
+@media (width <= 968px) {
+    .container {
+        display: grid;
+        grid-template-areas: 'vitruveo vitruveo' 'x discord' 'eplays eplays';
+        column-gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .eplays {
+        grid-area: eplays;
+        margin-top: 1rem;
+        margin-inline: auto;
+    }
+
+    .vitruveo {
+        grid-area: vitruveo;
+    }
+
+    .x {
+        grid-area: x;
+        margin-top: 5rem;
+        justify-self: flex-end;
+    }
+
+    .discord {
+        grid-area: discord;
+        margin-top: 5rem;
+        justify-self: flex-start;
+    }
+}

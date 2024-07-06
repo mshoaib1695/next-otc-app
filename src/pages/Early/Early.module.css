@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    grid-template-areas: 'left-content';
+    grid-template-columns: 1fr;
+    padding-inline: var(--inline-content-padding);
+}
+
+.left {
+    grid-area: left-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-top: 2rem;
+}
+
+.btnConnect {
+    margin-top: 2rem;
+}
+
+@media (width <=968px) {
+    .container {
+        padding-inline: var(--inline-mobilePage-padding);
+        min-height: 51vh;
+    }
+}
